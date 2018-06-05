@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+<h:outputStylesheet  name="css/style.css" />
+	
+	<!-- <div class="images"> -->
+	<!-- <h:graphicImage library="images" name="resourceManagement.png"/> -->
+	<!-- </div> -->
+	</h:head>
+<f:view locale="#{languageBean.locale}">
+<body>
+
+	<div id="header">
+		<ui:insert name="header">
+			<ui:include src="navigation.xhtml"></ui:include>
+
+
+		</ui:insert>
+	</div>
+
+
+
+	<div id="content" class="contents">
+		<ui:insert name="content">
+
+
+			<!--     	<ui:include src="rmv.xhtml"/>   -->
+
+		</ui:insert>
+	</div>
+
+	
+
+</body>
+</f:view>
+</html>

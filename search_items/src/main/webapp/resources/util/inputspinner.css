@@ -1,0 +1,15 @@
+.header {
+	font-family: Arial, sans-serif;
+	font-size: 20pt;
+	font-weight: bold;
+	color: green;
+	line-height: 50pt;
+}
+
+.errorMessage {
+	color: red;
+}
+
+.infoMessage {
+	color: green;
+}

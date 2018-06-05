@@ -1,0 +1,148 @@
+* {
+	font-family: arial, helvetica, sans-serif;
+	font-size: small;
+}
+body {
+	
+/* 	background-image: url("swisswine.jpg"); 
+background-image: url("#{resource['images/swisswine.jpg']}"); 
+background-repeat: no-repeat;
+background-position: center;
+
+*/
+}
+a {
+	color: blue;
+	text-decoration: none;
+}
+th {
+	text-align: left;
+	padding-right: 5pt;
+	color: #e20018;
+}
+td {
+	vertical-align: top;
+	padding-right: 5pt;
+}
+
+.title {
+	font-size: xx-large;
+	font-weight: bold;
+	color: red;
+	float: right;
+}
+.heading {
+	font-size: large;
+	font-weight: bold;
+	color: #e20018;
+}
+.important {
+	font-weight: bold;
+}
+.info {
+	color: black;
+}
+.error {
+	background-color: yellow;
+	font-weight: bold;
+}
+
+.swisswine{
+	
+	position: relative;
+	float: right;
+	top: 20px;
+}
+
+.hftmlogo{
+	
+	
+	margin-left:20px;
+	padding-right:960px;
+	position: relative;
+	float: right;
+	top: 20px;
+}
+
+.writing{
+	
+    font-weight: normal;
+    font-size: 18px;
+    font-variant: normal;
+    color:orange;
+}
+
+.pricing{
+	
+    font-weight: normal;
+    font-size: 18px;
+    font-variant: normal;
+    color:blue;
+}
+
+.errorMessage {
+	color: red;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.infoMessage {
+	color: black;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.position{
+	
+	position: relative;
+    left: 170px;
+    top: 80px;
+}
+
+
+/* Horizontal navi Begins*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* Add a gray right border to all list items, except the last item (last-child) */
+li {
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+/* Use position: sticky; to <li> to create a sticky navbar.*/
+ul {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/* Horizontal navi Ends*/
+

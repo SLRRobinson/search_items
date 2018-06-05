@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>Customers</h:head>
+<h:body>
+	<h:form name="CustomersForm">
+		<h:panelGrid columns="2">
+
+			<h:outputText for="name" value="Name" />
+			<h:inputText id="name" value="#{customerBean.customer.name}" />
+
+
+
+			<h:commandButton value="Save" action="#{customerBean.saveCustomer()}" />
+		</h:panelGrid>
+
+
+	</h:form>
+
+</h:body>
+</html>

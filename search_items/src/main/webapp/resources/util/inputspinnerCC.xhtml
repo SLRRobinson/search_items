@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:cc="http://xmlns.jcp.org/jsf/composite">
+	
+	<cc:interface>
+  <cc:attribute name="number" required="false"/>
+  <cc:attribute name="inc" default="1"/>
+  <cc:attribute name="updateButtonAction" 
+method-signature="java.lang.String action() " required="true" />
+</cc:interface>
+
+
+<cc:implementation>
+  <h:outputStylesheet library="util" name="inputspinner.css" /> 
+  <h:outputScript library="util"
+      name="inputSpinner.js" target="head"/>
+  <h:panelGroup>
+    <h:inputText id="input" value="#{cc.attrs.value}"
+        styleClass="inputSpinner-input"/>
+    <h:panelGroup id="buttons"
+        styleClass="inputSpinner-buttons">
+      <h:graphicImage styleClass="inputSpinner-button"
+          name="spin-up.png" library="util"
+          onclick="return changeNumber(
+          '#{cc.clientId}:input', #{cc.attrs.inc});"/>
+      <h:graphicImage styleClass="inputSpinner-button"
+          name="spin-down.png" library="util"
+          onclick="return changeNumber(
+          '#{cc.clientId}:input', #{-cc.attrs.inc});"/>
+          
+          <h:commandButton action="#{cc.attrs.updateButtonAction}" 
+value="#{cc.resourceBundleMap.updateButton}"/>
+    </h:panelGroup>
+  </h:panelGroup>
+</cc:implementation>
+	
+
+
+
+</html>
