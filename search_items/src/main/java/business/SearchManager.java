@@ -36,6 +36,7 @@ ArrayList<Product>cusProducts=new ArrayList<>();
 		em.persist(cus);
 		System.out.println("Customer saved");
 		em.getTransaction().commit();
+		em.close();
 		
 		
 		
@@ -48,6 +49,7 @@ ArrayList<Product>cusProducts=new ArrayList<>();
 		em.persist(cusProduct);
 		System.out.println("Product saved");
 		em.getTransaction().commit();
+		em.close();
 		
 	}
 

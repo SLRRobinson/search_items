@@ -21,12 +21,20 @@ public class Product implements Serializable {
 	private Long prodID;
 	private String name, description, color;
 	/*
-	 * https://stackoverflow.com/questions/2584521/in-a-bidirectional-jpa-onetomany-
-	 * manytoone-association-what-is-meant-by-the-in
+	 https://stackoverflow.com/questions/2584521/in-a-bidirectional-jpa-onetomany-
+	 manytoone-association-what-is-meant-by-the-in
 	 */
 	@ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL, targetEntity=Customer.class)
 	@JoinColumn(name = "customerID")
 	private Customer customer;
+	
+	
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+		if (!customer.getCusProduct().contains(this)) { 
+			customer.getCusProduct().add(this);
+		}
+	}
 	 
 	
 
@@ -77,9 +85,6 @@ public class Product implements Serializable {
 		return customer;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
 	
 	
 	}

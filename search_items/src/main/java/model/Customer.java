@@ -23,6 +23,13 @@ public class Customer implements Serializable {
 	private String name;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true,targetEntity=Product.class)
 	private List<Product> cusProduct = new ArrayList<>();
+	
+	public void addProduct(Product product) {
+        this.cusProduct.add(product);
+        if (product.getCustomer() != this) {
+        	product.setCustomer(this);
+        }
+    }
 
 	
 
