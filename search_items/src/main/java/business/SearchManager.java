@@ -44,6 +44,7 @@ ArrayList<Product>cusProducts=new ArrayList<>();
 	
 	public void saveProduct(Product cusProduct) {
 		em.getTransaction().begin();
+		cusProduct.setCustomer(customer);
 		em.persist(cusProduct);
 		System.out.println("Product saved");
 		em.getTransaction().commit();

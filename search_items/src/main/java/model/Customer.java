@@ -19,9 +19,9 @@ public class Customer implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long cusID;
+	private Long customerID;
 	private String name;
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", orphanRemoval = true,targetEntity=Product.class)
 	private List<Product> cusProduct = new ArrayList<>();
 
 	
@@ -30,12 +30,12 @@ public class Customer implements Serializable {
 	}
 
 	public Customer(Long cusID, String name) {
-		this.cusID = cusID;
+		this.customerID = cusID;
 		this.name = name;
 	}
 
 	public Long getCusID() {
-		return cusID;
+		return customerID;
 	}
 
 	public String getName() {
@@ -43,7 +43,7 @@ public class Customer implements Serializable {
 	}
 
 	public void setCusID(Long cusID) {
-		this.cusID = cusID;
+		this.customerID = cusID;
 	}
 
 	

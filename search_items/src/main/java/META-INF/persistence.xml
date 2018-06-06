@@ -10,7 +10,7 @@
 			<property name="javax.persistence.jdbc.url" 
 			value=" jdbc:hsqldb:hsql://localhost/search"/>
 			<property name="javax.persistence.jdbc.user" value="sa"/>
-			<property name="hibernate.hbm2ddl.auto" value="validate"/>
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
 		</properties>
 	</persistence-unit>
 </persistence>

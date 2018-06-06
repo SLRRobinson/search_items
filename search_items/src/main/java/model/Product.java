@@ -24,8 +24,8 @@ public class Product implements Serializable {
 	 * https://stackoverflow.com/questions/2584521/in-a-bidirectional-jpa-onetomany-
 	 * manytoone-association-what-is-meant-by-the-in
 	 */
-	@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	@JoinColumn(name = "cusID")
+	@ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL, targetEntity=Customer.class)
+	@JoinColumn(name = "customerID")
 	private Customer customer;
 	 
 	
@@ -80,8 +80,9 @@ public class Product implements Serializable {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-
-}
+	
+	
+	}
 
 /*
  * https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa
